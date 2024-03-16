@@ -20,7 +20,7 @@ let T = setInterval(()=>{
     //满足两个情况的时候执行，不然死了过后还回血
         this.nowHP = this.nowHP + healHP > this.maxHP ? this.maxHP : this.nowHP + healHP
         //三元表达式。是否大于最大血量？是，令其等于最大血量。不是：等于相加结果
-        /**也可以用setTimeout来控制回血速率，也可以用其他办法，可优化
+        /**也可以用setTimeout来控制回血速率，也可以用其他办法，可优化，受到伤害应该停止回血并重新开始计时
          * setTimeout(()=>{
          * "回血代码"
          * },间隔的毫秒数)
